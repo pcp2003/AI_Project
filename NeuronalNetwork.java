@@ -1,9 +1,4 @@
-package breakout;
-
-import utils.Commons;
-import utils.GameController;
-
-public class NeuronalNetwork implements GameController {
+public class NeuronalNetwork {
 
     private int inputDim;
     private int hiddenDim;
@@ -90,13 +85,7 @@ public class NeuronalNetwork implements GameController {
     }
 
     public double sigmoid (double x ){
-        return  1.0/(1.0+Math.exp(-x));
-    }
-
-    // next move e o foward da rede
-    @Override
-    public int nextMove(int[] currentState) {
-        return (int) (Math.random() * 3);
+       return  1.0/(1.0+Math.exp(-x));
     }
 
     public double[] forward(double[] inputValues) {
